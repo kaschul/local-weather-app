@@ -1,4 +1,7 @@
-<div>
+<div *ngIf="!current.image">
+    No data available
+</div>
+<div *ngIf = "current.image">
     <div id="currentcityanddate">
         <span>{{current.city}}, {{current.country}}</span>
         <br>
@@ -6,7 +9,7 @@
     </div>
     <div id="currentimageandtemp">
         <img [src]='current.image' />
-        <span>{{current.temperature}}</span> 
+        <span>{{current.temperature | number: '1.0-0'}}&#8457;</span> 
     </div>
     <div id="currentweatherdescrip">
         {{current.description}}
