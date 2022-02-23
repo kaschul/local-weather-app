@@ -6,11 +6,18 @@
 </div>  
 
 <div class="content" role="main">
-  <div class="card highlight-card">
+  <mat-toolbar color="primary">
     Localcast Weather
-  </div>
+  </mat-toolbar>
+ 
   <p>Your city, your forecast, right now!</p>
-  <div class="card-container">
-    <app-current-weather></app-current-weather>
+  
+  <div>
+    <app-citysearch></app-citysearch>
   </div>
+
+  <mat-card color="secondary">
+    <app-current-weather></app-current-weather>
+  </mat-card>
+
 </div>
