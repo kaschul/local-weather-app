@@ -7,17 +7,19 @@
 
 <div class="content" role="main">
   <mat-toolbar color="primary">
-    Localcast Weather
+    <mat-toolbar-row>
+    <span>Localcast Weather</span>
+    <span class="spacer"></span>
+    <span>Your city, your forecast, right now!</span>
+    </mat-toolbar-row>
   </mat-toolbar>
- 
-  <p>Your city, your forecast, right now!</p>
   
   <div>
-    <app-citysearch></app-citysearch>
+    <app-citysearch (searchEvent)="doSearch($event)"></app-citysearch>
   </div>
 
   <mat-card color="secondary">
-    <app-current-weather></app-current-weather>
+    <app-current-weather [current]="currentWeather"></app-current-weather>
   </mat-card>
 
 </div>
